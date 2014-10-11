@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convertion Temepture</title>
+     <head>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/main.js" type="text/javascript"></script>
+     </head>
+		<body class="cold" id="Body">
+			<div>
+			<form action="demo_form.asp">
+			Fahrenheit: <input onkeyup="C.value=ftoc(this.value.replace(/\D/g, ''));this.value = this.value.replace(/\D/g, '')" type="text" name="F" value="32"><br>
+			Celsius: <input onkeyup="F.value=ctof(this.value.replace(/\D/g, ''));this.value = this.value.replace(/\D/g, '')" type="text" name="C" value="0"><br><br><br><br>
+			</form>
+			</div>
+		</body>
+</head>
+</html>

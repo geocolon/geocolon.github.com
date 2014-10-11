@@ -1,0 +1,28 @@
+form {
+	margin: 20%;
+	text-align: left;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+	margin: 3em;
+	padding: 5px;
+	width: 100px;
+}
+
+.center {
+	text-align: center;
+}
+.cold {
+	background-image: url("../images/Coldweather.jpg");
+	background-repeat: no-repeat;
+}
+.hot{
+	background-image: url("../images/desert.jpeg");
+	background-repeat: no-repeat;
+}
+.optimal{
+	background-image: url("../images/forest.jpg");
+	background-repeat: no-repeat;
+}
