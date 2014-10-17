@@ -1,7 +1,6 @@
 $(document).ready(function(){
 	var total = 0;
 	
-	
 
 
 	$("#a10").click(function(){
@@ -9,34 +8,39 @@ $(document).ready(function(){
 		total = total + 10; // total += 10;
 		//update #out with the new total using the $("selector").html() 
 		$("#out").html(total);
-		$("#out").css("background-color", "pink");
-		$("#audio-1").trigger("play");
+		$("#out").css("background-color", "violet");
+		$("dummy").html('<audio id="audio-1" autoplay="autoplay"><source src="audio/Scary_Sound-Mark_DiAngelo-1101865305.mp3" type="audio/mpeg" ></audio>')
 		 	});
 		 	
 	$("#a20").click(function(){
 		total = total + 20;
 		$("#out").html(total);
-		$("#out").css("background-color", "0");
+		$("#out").css("background-color", "orange");
 		$("#audio-2").trigger("play");
 	});
 	$("#a30").click(function(){
 		total = total + 30;
 		$("#out").html(total);
+		$("#out").css("background-color", "green");
 		$("#audio-3").trigger("play");
 	});
 	$("#n10").click(function(){
 		total = total - 10;
 		$("#out").html(total);
+		$("#out").css("background-color", "#ffffff");
 		$("#audio-4").trigger("play");
 	});
 	$("#n20").click(function(){
 		total = total - 20;
 		$("#out").html(total);
+		$("#out").css("background-color", "yellow");
 		$("#audio-5").trigger("play");
 	});
 	$("#n30").click(function(){
 		total = total - 30;
 		$("#out").html(total);
+		$("#out").css("background-color", "purple");
+		
 	$("#audio-6").trigger("play");	
 	});
 	//do this for a20, a30, n10, etc.
