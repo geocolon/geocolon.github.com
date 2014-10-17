@@ -1,0 +1,47 @@
+@font-face {
+	font-family: Josefin Slab;
+   src: url("..Fonts/Josefin_Slab/JosefinSlab-Regular.ttf");
+   font-weight: bold;
+   font-style: italic;
+}
+body {
+	font-family: 'Josefin Slab', serif;
+/* 
+	background-image: url("../images/heart_revised.png");
+	background-repeat: repeat;
+ */
+	background-color: DarkRed;
+
+}
+h1 {
+	font-family: 'Josefin Slab', serif, 400 italic, 700 bold;
+	background-color: black;
+	color: #ffffff;
+	padding: 10px;
+	font-size:3em;
+}
+#user_name {
+	
+	font-size: 1.5em;
+	margin: 0 0 0.5em 0;
+	color: #ffffff;
+	font-family: 'Josefin Slab', serif;
+	font-weight: bold;
+}
+#profile-image {
+	background-color: DarkMagenta;
+	padding: 20px;
+	margin: 0 0 0 5%;
+	width: 300px;
+		
+}
+#border-profile-pic {
+	border: solid HotPink 0.5em;
+	border-radius: 25px;
+	display: block;
+	text-align: center;
+	margin: 0 15% 1em 10%;
+}
+.h50 {
+	height: 300px;
+}
