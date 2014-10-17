@@ -1,11 +1,5 @@
 $(document).ready(function(){
 	var total = 0;
-	var p10 = +10;
-	var p20 = +20;
-	var p10 = +30;
-	var p10 = -10;
-	var p20 = -20;
-	var p10 = -30;
 	
 	
 
@@ -13,9 +7,15 @@ $(document).ready(function(){
 	$("#a10").click(function(){
 		//add 10 to the total
 		total = total + 10; // total += 10;
+	$("#a20").click(function(){
+		//add 10 to the total
+		total = total + 20; // total += 20;
+		
 
 		//update #out with the new total using the $("selector").html() 
 		$("#out").html(total);
+	});
+	$("#a10").html(total);
 	});
 
 	//do this for a20, a30, n10, etc.
