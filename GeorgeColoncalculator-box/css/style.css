@@ -1,0 +1,42 @@
+body {
+	font-family: 'Almendra Display', cursive;
+	background-color: black;
+	font-size: 1.5em;
+	color: white;
+	font-weight: bolder;
+}
+#app {
+	padding: 10px;
+	font-family: monospace;
+	width: 500px;
+	margin: 50px auto 0px auto;
+	background-color: orange;
+	border-radius: 25px;
+	text-align: center;
+}
+.message {
+	margin: 1em 0;
+	text-align: center;
+}
+#audio {
+	
+}
+.clear {
+	clear: both;
+}
+.warning {
+	color: gold;
+	font-size: 60%;
+}
+.row div {
+	text-align: center;
+	width: 100px;
+	padding: 32px;
+	border: 1px dashed red;
+	float: left;
+}
+
+.row div:hover {
+	background-color: #cccccc;
+	cursor: pointer;
+}
