@@ -1,0 +1,283 @@
+body {
+	background-image: url("../images/cloud_2.gif");
+}
+.green {
+	background-color:green;
+	width: 100%;
+	height: 30px;
+	margin: 0 0;
+	bottom: -10px;
+	left: 0;
+	right: -3px;
+	z-index: -0;
+    position: absolute;
+}
+#second_wav {
+	opacity: 0;
+}
+#text {
+	font-family: 'Bevan', cursive;
+	font-size: 3em;
+	text-align: right;
+    position: absolute;
+    top: 0;
+    right:0;
+    z-index: 50;
+}
+
+h1 {
+	font-family: 'Bevan', cursive;
+	text-align: center;
+	color: black;
+	z-index: 99;
+}
+button {
+	font-family: 'Bevan', cursive;
+	text-align: center;
+	margin-top: 50px;
+	margin-left: 100px;
+	color: black;
+	z-index: 99;
+	font-size:1.5em;
+	border-radius: 25px;
+	height: 50px;
+	width: 300px;
+	background-color: red;
+}
+audio {
+	margin-left: 100px;
+}
+
+#rooster {
+	left: 100px;
+	margin: 0;
+	bottom: 3px;
+	z-index: 1;
+    position: absolute;
+}
+#lamb {
+	left: 200px;
+	margin: 0;
+	bottom: 3px;
+	z-index: 2;
+    position: absolute;
+}
+#sheep {
+	left: 300px;
+	margin: 0;
+	bottom: -7px;
+	z-index: 3;
+    position: absolute;
+
+}
+#cow {
+	left: 400px;
+	margin: 0;
+	bottom: 3px;
+	z-index: -4;
+    position: absolute;
+
+}
+div.fog {
+	width:100%;
+	height: 100%;
+	background-color: white;
+	opacity: .4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.still {
+
+}
+
+#guy {
+	left: -200px;
+	margin: 0;
+	bottom: 3px;
+	z-index: 5;
+    position: absolute;
+}
+#sun {
+	float: right;
+	margin: 2em 10%;
+	display: block;
+	z-index: -80;
+	
+	
+}
+.sun-rocks {
+	-webkit-animation-name: sun-rocks;
+	-webkit-animation-duration: .6s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease;
+	-moz-animation-name: sun-rocks;
+	-moz-animation-duration: .6s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: ease;
+	animation-name: sun-rocks;
+	animation-duration: .6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+@-webkit-keyframes sun-rocks {
+	0%{-webkit-transform: translatex(0);}
+	25%{-webkit-transform: translatey(-10px);}
+	50%{-webkit-transform: translatey(10px);}
+	75%{-webkit-transform: translatey(-10px);}
+	100%{-webkit-transform: translatey(0);}
+}
+@-moz-keyframes sun-rocks {
+	0%{-moz-transform: translatex(0);}
+	25%{-moz-transform: translatey(-10px);}
+	50%{-moz-transform: translatey(10px);}
+	75%{-moz-transform: translatey(-10px);}
+}
+@keyframes sun-rocks {
+	0%{transform: translatex(0);}
+	25%{transform: translatey(-10px);}
+	50%{transform: translatey(10px);}
+	75%{transform: translatey(-10px);}
+}
+/* 
+Above the sun is rocking
+ */
+span.shake {
+	font-size: 2em;
+	-webkit-animation-name: shake;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: shake;
+	-moz-animation-duration: .5s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+	animation-name: shake;
+	animation-duration: .5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@-webkit-keyframes shake {
+	0%{color:black;}
+	25%{color:red;}
+	50%{color:yellow;}
+	75%{color:blue;}
+	100%{color:black;}
+}
+@-moz-keyframes shake {
+	0%{color:black;}
+	25%{color:red;}
+	50%{color:yellow;}
+	75%{color:blue;}
+	100%{color:black;}
+}
+@keyframes shake {
+	0%{color:black;}
+	25%{color:red;}
+	50%{color:yellow;}
+	75%{color:blue;}
+	100%{color:black;}
+}
+.walk-in{
+	-webkit-animation-name: walk-in;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease;
+	-moz-animation-name: walk-in;
+	-moz-animation-duration: 2s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease;
+	animation-name: walk-in;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+}
+
+@-webkit-keyframes walk-in {
+	0%{-webkit-transform: translatex(0);}
+	100%{-webkit-transform: translatex(700px);}
+}
+@-moz-keyframes walk-in {
+	0%{-moz-transform: translatex(0);}
+	100%{-moz-transform: translatex(700px);}
+}
+@keyframes walk-in {
+	0%{transform: translatex(0);}
+	100%{transform: translatex(700px);}
+}
+.jump-around {
+	-webkit-animation-name: jump-around;
+	-webkit-animation-duration: .6s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease;
+	-moz-animation-name: jump-around;
+	-moz-animation-duration: .6s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: ease;
+	animation-name: jump-around;
+	animation-duration: .6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+@-webkit-keyframes jump-around {
+	0%{-webkit-transform: translatey(0);}
+	50%{-webkit-transform: translatey(-100px);}
+	100%{-webkit-transform: translatey(0);}
+}
+@-moz-keyframes jump-around {
+	0%{-moz-transform: translatey(0);}
+	50%{-moz-transform: translatey(-100px);}
+	100%{-moz-transform: translatey(0);}
+}
+@keyframes jump-around {
+	0%{transform: translatey(0);}
+	50%{transform: translatey(-100px);}
+	100%{transform: translatey(0);}
+}
+#tree {
+	left: 300px;
+	margin: 0;
+	bottom: 3px;
+	z-index: -50;
+    position: absolute;
+}
+#dance_pig {
+	left: 30px;
+	margin: 0;
+	bottom: 3px;
+	z-index: -1;
+    position: absolute;
+}
+#dance_cow {
+	left: 700px;
+	margin: 0;
+	height: 200px;
+	bottom: -10px;
+	z-index: 2;
+    position: absolute;
+}
+#dance_cow2{
+	left: 800px;
+	margin: 0;
+	height: 200px;
+	bottom: -10px;
+	z-index: 2;
+    position: absolute;
+}
+#blindchicken {
+	left: 400px;
+	margin: 0;
+	bottom: -10px;
+	z-index: 2;
+    position: absolute;
+}
+#pig_dives {
+	left: 600px;
+	margin: 0;
+	height: 100px;
+	bottom: -10px;
+	z-index: 1;
+    position: absolute;
+}
