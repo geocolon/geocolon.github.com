@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>George Colon</title>
-
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -30,19 +30,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand" id="aboutme-link">George Colon</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#aboutme">About me <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
+        <li class="active"><a id="aboutme-link">About me <span class="sr-only">(current)</span></a></li>
+        <li><a id="portfolio-link">Portfolio</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="https://twitter.com/geo_c_colon">Twitter</a></li>
-            <li><a href="https://www.linkedin.com/in/geocolon">Linked In</a></li>
+            <li><a target="_blank" href="https://twitter.com/geo_c_colon">Twitter</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/geocolon">Linked In</a></li>
             <!-- 
 <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
@@ -65,7 +65,7 @@ Home starts here
  <!-- 
 About me starts here
  -->
-<div id="aboutme">
+<div id="aboutme" class="page-section">
 	<div class="container">
 	<h2><span class="shadowH2">ABOUT ME</span></h2>
 	<p class="flushleft"><span class="DropCap-Orange">B</span><span class="Boldcaps"><strong>orn</strong></span> and raised in Brooklyn by my Dominican and Puerto Rican mother, my father is Jamaican and Chinese. My first memories were watching a <a href="http://youtu.be/yCYf1jtnHmw" target="_blank"><em>Teenage Mutant Ninja Turtles</em></a> cartoon after school at 4 years old. Ever since then I&rsquo;ve loved cartoons. From cartoons I started drawing other cartoons, this gave me an interest in art, illustration, and comic books and sequential art.</p>
@@ -93,13 +93,12 @@ About me starts here
 		<p class="flushleft">Talk to me about any of these movies.</p>
 		</div>		
 	</div>
-	</div>
 
  <!-- 
 Carousel starts here
  -->
- 
-<div id="portfolio" class="container">
+<div id="portfolio" style="display:none" class="page-section">
+<div class="container">
 <h2>PRINT PORTFOLIO</h2>
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -117,49 +116,65 @@ Carousel starts here
 	<div class="container">
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="images/QOTSAposter2.jpg" alt="OTSAposter2">
+    <center>
+    <img style="margin-top:70px" src="images/QOTSAposter2.jpg" alt="OTSAposter2">
+    </center>
       <div class="carousel-caption">
         <p>College art work for Queens of the Stone Age</p> 
       </div>
     </div>
     <div class="item">
+     <center>
       <img src="images/Antony-and-Cleopatra.jpg" alt="...">
+     </center>
       <div class="carousel-caption">
         ...
       </div>
     </div>
      <div class="item">
+     <center>
       <img src="images/IDEA_ARE_BULLE_PROOF.jpg" alt="...">
+       </center>
       <div class="carousel-caption">
         ...
       </div>
     </div>
      <div class="item">
+      <center>
       <img src="images/titus-_to_be_used.jpg" alt="...">
+    	 </center>
       <div class="carousel-caption">
         ...
       </div>
     </div>
     <div class="item">
+     <center>
       <img src="images/QOTSAshritwomens.jpg" alt="...">
+       </center>
       <div class="carousel-caption">
         ...
       </div>
     </div>
     <div class="item">
+       <center>
       <img src="images/QOTSAposter.jpg" alt="...">
+       </center>
       <div class="carousel-caption">
         ...
       </div>
     </div>
     <div class="item">
+      <center>
       <img src="images/QOTSA_vip.jpg" alt="...">
+       </center>
       <div class="carousel-caption">
         ...
       </div>
     </div>
     ...
-  </div>
+  </div> 
+    <!-- Wrapper for slides end -->
+
 
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -178,5 +193,34 @@ Carousel starts here
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>
+    
+    <script>
+		
+    $( document ).ready(function() {
+	  $( "#aboutme-link" ).click(function() {
+			$('.page-section').each(function(i, obj) {
+  			$(this).hide();
+		 });
+		 alert('about me link was clicked!!!');
+			$( "#aboutme" ).fadeIn( "slow", function() {
+		   // Animation complete
+		   });
+	  });
+	   $( "#portfolio-link" ).click(function() {
+		$('.page-section').each(function(i, obj) {
+  			$(this).hide();
+		 });
+			$( "#portfolio" ).fadeIn( "slow", function() {
+		   // Animation complete
+		   });
+	  });
+	   $( "#resume-link" ).click(function() {
+	  alert('about me link was clicked!!!'); 
+	  });
+	 //   $( "#portfolio-link" ).click(function() {
+// 	  alert('about me link was clicked!!!'); 
+// 	  });
+    });
+    </script>
   </body>
 </html>

@@ -2318,8 +2318,5 @@ if (typeof jQuery === 'undefined') {
     })
   })
   
-  function toggler(aboutme) {
-    $("#" + aboutme).toggle();
-}
 
 }(jQuery);
