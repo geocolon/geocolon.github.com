@@ -16,7 +16,9 @@ em {
 	text-align: center;
 	color:red;
 }
-
+#resume {
+	display: none;
+}
 span.DropCap-Orange {
 	font-size: 2em;
 	float: left;
