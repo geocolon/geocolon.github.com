@@ -20,7 +20,7 @@
     
   </head>
   <body>
-<nav class="navbar navbar-inverse" role="navigation">
+ <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -30,7 +30,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" id="aboutme-link">George Colon</a>
+      <a class="navbar-brand" id="brand">George Colon</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -188,25 +188,174 @@ Carousel starts here
 </div>
 </div>
 </div>                   
-</div>                   
+</div> 
+   
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+<!-- 
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+ -->
+        <h4 class="modal-title center" id="myModalLabel">Welcome</h4>
+      </div>
+      <div class="modal-body">
+        <p class="center">Hello my name is George. What's Your name?<br/><br/></p>
+        <center>
+        <input style="width:30%; float:none;" class="form-control" id="yourname" placeholder="Your name...">
+      	</center>
+      </div>
+      <div class="modal-footer center">
+<!-- 
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+ -->
+        <button type="button" id="savenamebutton" class="btn btn-primary btn-lg">Save</button>
+      </div>
+    </div>
+  </div>
+</div>  <!-- Modal end -->
+
+<!-- Modal 2 -->
+<div class="modal fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+<!-- 
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+ -->
+        <h4 class="modal-title center" id="myModalLabel-2">Welcome</h4>
+      </div>
+      <div class="modal-body">
+        <p class="center">Nice to meet you <span id="yourname-text"></span>.
+        </p>
+        <!-- 
+<center>
+        <input style="width:30%; float:none;" class="form-control" id="yourname" placeholder="Your name...">
+      	</center>
+ -->
+      </div>
+      <div class="modal-footer center">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+<!-- 
+        <button type="button" class="btn btn-primary btn-lg">Save</button>
+ -->
+      </div>
+    </div>
+  </div>
+</div>  <!-- Modal end -->
+<!-- Modal 2 -->
+<div class="modal fade" id="myModal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-3" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+<!-- 
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+ -->
+        <h4 class="modal-title center" id="myModalLabel-3">Welcome</h4>
+      </div>
+      <div class="modal-body">
+        <p class="center">Welcome back <span id="yourname-back"></span>.
+        </p>
+        <!-- 
+<center>
+        <input style="width:30%; float:none;" class="form-control" id="yourname" placeholder="Your name...">
+      	</center>
+ -->
+      </div>
+      <div class="modal-footer center">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+<!-- 
+        <button type="button" class="btn btn-primary btn-lg">Save</button>
+ -->
+      </div>
+    </div>
+  </div>
+</div>  <!-- Modal end -->
+
+            
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>
     
     <script>
+	function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+    }
+    return "";
+	}
+		function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+		}
 		
     $( document ).ready(function() {
-	  $( "#aboutme-link" ).click(function() {
+		var username=getCookie("username");
+		if (username!="") {
+			$('#yourname-back').html(username);
+			$('#myModal-3').modal('show');
+    	}else{
+    		$('#myModal').modal('show');
+    	}
+// 		$('#myModal').modal('show');
+		 $( "#savenamebutton" ).click(function() {
+			var inputtext = $('#yourname').val();
+			var username = $.trim(inputtext);
+		 	if (username==""){
+		 		alert('Please enter your name');
+		 	}
+		 	else{
+		 		setCookie("username", username, 365);
+		 		$('#yourname-text').html(username);
+		 			$('#myModal').modal('hide');
+		 			$('#myModal-2').modal('show');
+		 	}
+		 });
+
+		$('.tooltipleft').fadeIn('slow', function () { $(this).delay(5000).fadeOut('slow'); 
+			$('#loadingBackground').delay(5000).fadeOut('slow');
+		});
+		
+		 $( "#brand" ).click(function() {
+			 $('.nav .active').each(function(i, obj) {
+			   $(obj).removeClass('active');
+			});
+			$( "#aboutme-link" ).parent().addClass('active');
 			$('.page-section').each(function(i, obj) {
   			$(this).hide();
 		 });
-		 alert('about me link was clicked!!!');
+			$( "#aboutme" ).fadeIn( "slow", function() {
+		   // Animation complete
+		   });
+	  });
+		$( "#aboutme-link" ).click(function() {
+		 $('.nav .active').each(function(i, obj) {
+			   $(obj).removeClass('active');
+			});
+		   $( this ).parent().addClass('active');
+			$('.page-section').each(function(i, obj) {
+  			$(this).hide();
+		 });
 			$( "#aboutme" ).fadeIn( "slow", function() {
 		   // Animation complete
 		   });
 	  });
 	   $( "#portfolio-link" ).click(function() {
+	   		 $('.nav .active').each(function(i, obj) {
+			   $(obj).removeClass('active');
+			});
+		   $( this ).parent().addClass('active');
 		$('.page-section').each(function(i, obj) {
   			$(this).hide();
 		 });
