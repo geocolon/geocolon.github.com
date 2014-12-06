@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+#carousel-example-generic {
+	height:700px;
+}
+body {
+	background-color: lightgray;
+}
+em {
+	font-style: italic;
+}
+.home {
+	display:none;
+}
+#myname {
+	text-align: center;
+	color:red;
+}
+#resume {
+	display: none;
+}
+span.DropCap-Orange {
+	font-size: 2em;
+	float: left;
+	margin-right: 0.1em;
+	line-height: 1.5em;
+	margin-top: -0.5em;
+	margin-bottom: -0.4em;
+}
+.carousel-inner {
+	text-align:center;
+}
+div.carousel-inner img {
+	margin:20px 0;
+	max-height:660px;
+}
+h2 {
+	font-family: 'Varela Round', sans-serif;
+	text-transform:uppercase;
+	margin: 2em 0 0.5em 0;
+}
+.navbar-brand {
+	font-family: 'Varela Round', sans-serif;
+	text-transform:uppercase;
+}
+#loadingbackground { 
+	display: table; 
+	position: absolute; 
+	top:0; 
+	left:0; 
+	width:100%; 
+	height:100%; 
+	background-color: navyblue; z-index: 100; 
+}
+.center {
+	text-align: center;
+}
