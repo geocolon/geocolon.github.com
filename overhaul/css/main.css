@@ -71,10 +71,11 @@ p.space_orn {
 	margin: 1em 0;
 }
 p.copyright-bottom-page {
+	position: absolute;
+	width: 100%;
+	bottom: 10px;
 	font-size: 70%;
-	margin: 3em 20% 1em 20%;
 	text-align: center;
-	padding:5%;
 }
 h2 {
 	font-size:3em;
@@ -139,3 +140,8 @@ width:50%;
 float:right;
 width:45%;
 }
+/*#TrainCars{
+width:300%;
+position: absolute;
+left: -300%;
+top:10%;}*/
