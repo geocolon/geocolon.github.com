@@ -1,0 +1,137 @@
+@font-face {
+    font-family: "Baskerville",serif;
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+    font-family: "Futura",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+}
+#aboutmeheading {
+	border-bottom: 3px rgb(0,51,153) solid;
+	padding-bottom: 5px;
+}
+#portfolioheading {
+	border-bottom: 3px rgb(255,153,51) solid;
+	padding-bottom: 5px;
+}
+#contactheading {
+	border-bottom: 3px rgb(153,204,204) solid;
+	padding-bottom: 5px;
+}
+#homestage {
+	display: block;
+  	box-shadow: 3px 3px 5px 6px #ccc;
+  	padding: 30px;
+  	margin: 1em 2%;
+}
+#stage1 {
+	display: block;
+  	box-shadow: 3px 3px 5px 6px #ccc;
+  	padding: 30px;
+  	margin: 1em 2%;
+}
+#stage2 {
+	display: block;
+  	box-shadow: 3px 3px 5px 6px #ccc;
+  	padding: 30px;
+  	margin: 1em 2%;
+}
+#stage3 {
+	display: block;
+  	box-shadow: 3px 3px 5px 6px #ccc;
+  	padding: 30px;
+  	margin: 1em 2%;
+}
+a {
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    float: left;
+}
+body {
+	font-family: "Baskerville",sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+p {
+	font-size: 1em;
+}
+p.indent {
+	text-indent: 1.6em;
+}
+p.space_orn {
+	text-align: center;
+	margin: 1em 0;
+}
+p.copyright-bottom-page {
+	font-size: 70%;
+	margin: 3em 20% 1em 20%;
+	text-align: center;
+	padding:5%;
+}
+h2 {
+	font-size:3em;
+	margin:1em 0;
+}
+h1,h2 {
+	font-family: "Futura",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+}
+
+#mainlogo {
+    text-align: center;
+	font-size: 3em;
+    letter-spacing: 7px;
+}
+span.dropcap {
+	font-family: "Baskerville",sans-serif;
+	font-size: 4em;
+	float:left;
+	margin-top: -0.5em;
+ 	margin-bottom: -0.4em;	
+	line-height: 1.5em;
+	margin-right: 0.005em;
+	
+}
+.navbar-default {
+	background-color: #fff;
+	border: none;
+	width: 100px;
+}
+.navbar-default .navbar-collapse {
+	border: none;
+
+}
+#twitterfeed {
+	display: block;
+	margin: 0 20%;
+}
+#instagramfeed {
+	display: block;
+	width: 100px;
+	border: 3px red;
+	margin: 1em 0;
+}
+/* 
+Color palette
+ */
+.caliblue {
+	color: rgb(0,51,153);
+}
+.caliyellow {
+	color: rgb(255,153,51);
+}
+.caliseagreen {
+	color: rgb(153,204,204);
+}
+
+
+
