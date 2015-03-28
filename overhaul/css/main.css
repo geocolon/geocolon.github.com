@@ -20,8 +20,12 @@
 	border-bottom: 3px rgb(153,204,204) solid;
 	padding-bottom: 5px;
 }
-#homestage {
-	display: block;
+.homestage {
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	background-color: white;
   	box-shadow: 3px 3px 5px 6px #ccc;
   	padding: 30px;
   	margin: 1em 2%;
@@ -85,10 +89,9 @@ h1,h2 {
 	font-weight: 500;
 }
 
-#mainlogo {
-    text-align: center;
-	font-size: 3em;
-    letter-spacing: 7px;
+.logo {
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 span.dropcap {
 	font-family: "Baskerville",sans-serif;
@@ -103,8 +106,6 @@ span.dropcap {
 .navbar-default {
 	background-color: #fff;
 	border: none;
-	width: 50%;
-	margin-left: 25%;
 }
 .navbar-default .navbar-collapse {
 	border: none;
