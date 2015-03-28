@@ -8,6 +8,7 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
 		<link href="css/reset.css" rel="stylesheet">
+		<script type="text/javascript" src="js/instafeed.js"></script>
 	</head>
 	<body>
 <!-- 
@@ -41,7 +42,7 @@ Navigation bar start
       <ul class="nav navbar-nav">
         <li><a href="#">ABOUT ME <span class="sr-only">(current)</span></a></li>
         <li><a href="#">PORTFOLIO</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="#">FEED</a></li>
       </ul>      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -96,18 +97,24 @@ End of Stage 1
  -->
 		<div id="stage3">
 		<div class="container">
-			<h2 id="contactheading"><span class="caliseagreen">CONTACT</span></h2>
-			<div id="instagramfeed">
-
-			</div>
+			<h2 id="contactheading"><span class="caliseagreen">FEED</span></h2>
 			
-			<div id="twitterfeed">
+			<div class="rightHalf" id="twitterfeed">
 				<a class="twitter-timeline" href="https://twitter.com/geo_c_colon" data-widget-id="580830889891921920">Tweets by @geo_c_colon</a>
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 			</div>
-			
-			
-			
+
+			<!--instagram feed-->
+			<script type="text/javascript">
+				var feed = new Instafeed({
+					get: 'user',
+					userId: 35013798,
+					accessToken: '35013798.467ede5.65cee41631104a9599a59c1a6f9aa141',
+					limit: 12
+				});
+				feed.run();
+			</script>
+			<div class="leftHalf" id="instafeed"></div>
 		</div>
 		</div>
 <!-- 

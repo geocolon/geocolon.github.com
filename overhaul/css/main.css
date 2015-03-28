@@ -112,7 +112,6 @@ span.dropcap {
 }
 #twitterfeed {
 	display: block;
-	margin: 0 20%;
 }
 #instagramfeed {
 	display: block;
@@ -133,5 +132,10 @@ Color palette
 	color: rgb(153,204,204);
 }
 
-
-
+.leftHalf {
+width:50%;
+}
+.rightHalf {
+float:right;
+width:45%;
+}
