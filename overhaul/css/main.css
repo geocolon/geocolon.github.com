@@ -71,9 +71,7 @@ p.space_orn {
 	margin: 1em 0;
 }
 p.copyright-bottom-page {
-	position: absolute;
 	width: 100%;
-	bottom: 10px;
 	font-size: 70%;
 	text-align: center;
 }
@@ -105,7 +103,8 @@ span.dropcap {
 .navbar-default {
 	background-color: #fff;
 	border: none;
-	width: 100px;
+	width: 50%;
+	margin-left: 25%;
 }
 .navbar-default .navbar-collapse {
 	border: none;
