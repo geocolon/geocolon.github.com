@@ -12,6 +12,25 @@
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/instafeed.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!-- fancybox -->
+		<!-- Add jQuery library -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+		<!-- Add mousewheel plugin (this is optional) -->
+		<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+		<!-- Add fancyBox -->
+		<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+		<!-- Optionally add helpers - button, thumbnail and/or media -->
+		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+	
 	</head>
 	<body>
 <!-- 
@@ -24,8 +43,8 @@
 Navigation bar start
  -->
   <nav class="navbar navbar-default navbar-fixed-top">
-  <span class="logo">GEORGE <span class="caliblue"><em>COL&Oacute;N</em></span></span>
   <div class="container-fluid">
+<h1 class="logo">GEORGE <span class="caliblue"><em>COL&Oacute;N</em></span></h1>
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -42,8 +61,8 @@ Navigation bar start
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a class="bgcaliblue" href="#stage1">PORTFOLIO</a></li>
-        <li><a class="bgcaliyellow" href="#stage2">ABOUT ME <span class="sr-only">(current)</span></a></li>
+        <li><a class="bgcaliyellow" href="#stage1">PORTFOLIO</a></li>
+        <li><a class="bgcaliblue" href="#stage2">ABOUT ME <span class="sr-only">(current)</span></a></li>
         <li><a class="bgcaliseagreen" href="#stage3">FEED</a></li>
       </ul>      
     </div><!-- /.navbar-collapse -->
@@ -54,19 +73,57 @@ Navigation bar start
 		<div id="stage1" class="stage">
 			<div class="container">
 		<h2 id="portfolioheading"><span class="caliyellow">PORTFOLIO</span></h2>
-			<a class="fancybox" rel="gallery1" href="http://farm8.staticflickr.com/7308/15783866983_27160395b9_b.jpg" title="Rodeo Dusk (_JonathanMitchellPhotography_)">
-			<img src="http://farm8.staticflickr.com/7308/15783866983_27160395b9_m.jpg" alt="" />
+		<div class="galleryfancy">
+			<p class="subtitle-gallery"><em class="caliyellow">UX</em> DESIGN</p>
+			<a class="fancybox-thumb" target="_blank" rel="fancybox-thumb" href="images/T5_Presentation_v4.pdf" title="">
+			<img src="images/T5_Presentation_v4-page-001.jpg" alt="" />
 			</a>
-			<a class="fancybox" rel="gallery1" href="http://farm3.staticflickr.com/2880/10346743894_0cfda8ff7a_b.jpg" title="Les papillons ont du chagrin (JMS')">
-			<img src="http://farm3.staticflickr.com/2880/10346743894_0cfda8ff7a_m.jpg" alt="" />
+			<p class="subtitle-gallery"><em class="caliyellow">GRAPHIC</em> DESIGN</p>
+			<a class="fancybox-thumb" rel="fancybox-thumb" href="images/QOTSAposter.jpg" title="This is a poster QOTSA">
+			<img src="images/QOTSAposter.jpg" alt="" />
 			</a>
-			<a class="fancybox" rel="gallery1" href="http://farm4.staticflickr.com/3857/14395875498_c43e5c4415_b.jpg" title="Chedder Gorge with goats looking (Si Photography)">
-			<img src="http://farm4.staticflickr.com/3857/14395875498_c43e5c4415_m.jpg" alt="" />
+			<a class="fancybox-thumb" rel="fancybox-thumb" href="images/QOTSAshritwomens.jpg" title="Women's t-shirt design for <em>Queens of the Stone Age</em>">
+			<img src="images/QOTSAshritwomens.jpg" alt="" />
 			</a>
-			<a class="fancybox" rel="gallery1" href="http://farm8.staticflickr.com/7475/15723733583_b4a7b52459_b.jpg" title="Pudacuo (OsvinC)">
-			<img src="http://farm8.staticflickr.com/7475/15723733583_b4a7b52459_m.jpg" alt="" />
+			<a class="fancybox-thumb" rel="fancybox-thumb" href="images/QOTSA_vip.jpg" title="VIP backstage pass design (<em>Queens of the Stone Age</em>)">
+			<img src="images/QOTSA_vip.jpg" alt="" />
+			</a>
+			<a class="fancybox-thumb" rel="fancybox-thumb" href="images/IDEA_ARE_BULLE_PROOF.jpg" title="<em>Mahatma Gandhi</em>. Silk screen design for posters.">
+			<img src="images/IDEA_ARE_BULLE_PROOF.jpg" alt="" />
+			</a>
+			<a class="fancybox-thumb" rel="fancybox-thumb" href="images/Antony-and-Cleopatra.jpg" title="">
+			<img src="images/Antony-and-Cleopatra.jpg" alt="" />
+			</a>
+			<p class="subtitle-gallery">ART<br /><em class="caliyellow">(sketch book)</em></p>
+			<a class="fancybox-thumb" rel="fancybox-thumb" href="images/x01_art-1.jpg" title="">
+			<img src="images/x01_art-1.jpg" alt="" />
+			</a>
+			<a class="fancybox-thumb" rel="fancybox-thumb" href="images/x01_art-2.jpg" title="">
+			<img src="images/x01_art-2.jpg" alt="" />
+			</a>
+			<a class="fancybox-thumb" rel="fancybox-thumb" href="images/x01_art-3.jpg" title="">
+			<img src="images/x01_art-3.jpg" alt="" />
+			</a>
+			<a class="fancybox-thumb" rel="fancybox-thumb" href="images/x01_art-4.jpg" title="">
+			<img src="images/x01_art-4.jpg" alt="" />
+			</a>
+			<a class="fancybox-thumb" rel="fancybox-thumb" href="images/x01_art-5.jpg" title="">
+			<img src="images/x01_art-5.jpg" alt="" />
+			</a>
+			<a class="fancybox-thumb" rel="fancybox-thumb" href="images/x01_art-6.jpg" title="">
+			<img src="images/x01_art-6.jpg" alt="" />
+			</a>
+			<a class="fancybox-thumb" rel="fancybox-thumb" href="images/x01_art-7.jpg" title="">
+			<img src="images/x01_art-7.jpg" alt="" />
+			</a>
+			<a class="fancybox-thumb" rel="fancybox-thumb" href="images/x01_art-8.jpg" title="">
+			<img src="images/x01_art-8.jpg" alt="" />
+			</a>
+			<a class="fancybox-thumb" rel="fancybox-thumb" href="images/titus-_to_be_used.jpg" title="">
+			<img src="images/titus-_to_be_used.jpg" alt="" />
 			</a>
 		</div>
+			</div>
 <!--/End of Stage 1-->
 		</div>
 <!-- Stage 2 -->
