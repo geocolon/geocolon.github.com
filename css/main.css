@@ -2,7 +2,7 @@ body {
 	font-family: "Baskerville",sans-serif;
 	font-style: normal;
 	font-weight: normal;
-	background-color: #E6E6E6;
+	background-color: #D4D4D4;
 }
 @font-face {
     font-family: "Baskerville",serif;
@@ -87,11 +87,12 @@ h1,h2 {
 	font-style: normal;
 	margin: 0 0 0 0;
 	font-weight: normal;
-	 letter-spacing: 1px;
-  position: relative;
-  display: block;
-  padding: 20px 20px;
-  float: left;
+	letter-spacing: 1px;
+	position: relative;
+	display: block;
+	padding: 20px 20px;
+	text-align: center;
+	background-color: #D4D4D4;
 }
 span.dropcap {
 	font-family: "Baskerville",sans-serif;
@@ -104,7 +105,7 @@ span.dropcap {
 	
 }
 .navbar-default {
-	background-color: #E6E6E6;
+	background: none;
 	border: none;
 }
 .navbar-default .navbar-collapse {
@@ -160,4 +161,10 @@ width:100%;
 .galleryfancy img {
 	height: 150px;
 	margin: 0;
+}
+.navbar-toggle{
+margin-top:-50px;}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+color:white;
+background-color: #D4D4D4;
 }
