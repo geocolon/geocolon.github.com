@@ -14,6 +14,7 @@ body {
 	font-style: normal;
 	font-weight: 500;
 }
+
 #aboutmeheading {
 	border-bottom: 3px rgb(0,51,153) solid;
 	padding-bottom: 5px;
@@ -82,7 +83,7 @@ h1,h2 {
 	margin-top: 0.5em;
 }
 .logo {
-	font-size: 1.5em;
+	font-size: 2em;
 	font-family: "Futura",sans-serif;
 	font-style: normal;
 	margin: 0 0 0 0;
@@ -92,8 +93,59 @@ h1,h2 {
 	display: block;
 	padding: 20px 20px;
 	text-align: center;
-	background-color: #D4D4D4;
+	z-index: -99;
+	background-color:#D4D4D4;
+	-webkit-animation-name: dropIn;
+	-webkit-animation-duration:1.5s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in;
+	animation-name: dropIn;
+	animation-duration:1.5s;
+	animation-iteration-count:1;
+	animation-timing-function: ease-in;
 }
+.dropIn{
+	background-color:#D4D4D4;
+	-webkit-animation-name: laterDropIn;
+	-webkit-animation-duration:2.5s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in;
+	animation-name: laterDropIn;
+	animation-duration:2.5s;
+	animation-iteration-count:1;
+	animation-timing-function: ease-in;
+}
+@-webkit-keyframes laterDropIn{
+	0% {-webkit-transform: translate(0px,-300px);}
+	70% {-webkit-transform: translate(0px,-300px);}
+	85% {-webkit-transform: translate(0px,30px);}
+	95% {-webkit-transform: translate(0px,-10px);}
+	98% {-webkit-transform: translate(0px,2px);}
+	100% {-webkit-transform: translate(0px,0px);}
+}
+@keyframes laterDropIn{
+	0% {transform: translate(0px,-300px);}
+	70% {transform: translate(0px,-300px);}
+	85% {transform: translate(0px,30px);}
+	95% {transform: translate(0px,-10px);}
+	98% {transform: translate(0px,2px);}
+	100% {transform: translate(0px,0px);}
+}
+@-webkit-keyframes dropIn{
+	0% {-webkit-transform: translate(0px,-300px);}
+	75% {-webkit-transform: translate(0px,50px);}
+	85% {-webkit-transform: translate(0px,-10px);}
+	98% {-webkit-transform: translate(0px,2px);}
+	100% {-webkit-transform: translate(0px,0px);}
+}
+@keyframes dropIn{
+	0% {transform: translate(0px,-300px);}
+	75% {transform: translate(0px,50px);}
+	85% {transform: translate(0px,-10px);}
+	98% {transform: translate(0px,2px);}
+	100% {transform: translate(0px,0px);}
+}
+
 .container-fluid{
 padding:0;
 }
@@ -154,9 +206,11 @@ width:45%;
 }
 #TrainCars{
 position: absolute;
+/*top: 100%;*/
 top: 50px;
 height:90%;
 width:100%;
+z-index:99;
 }
 
 /* fancybox */
@@ -174,4 +228,6 @@ color:white;
 background-color: #D4D4D4;
 }
 .nav{
+position:relative;
 margin-right: 10px;
+}
