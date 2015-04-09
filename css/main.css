@@ -44,6 +44,14 @@ body {
 	left:0;
 	z-index: -99;
 	height: 370px;
+	background-color: #ccc;
+}
+#TrainCars{
+	margin-top: 400px;
+	height:90%;
+	width:100%;
+	z-index:99;
+	background-color: #CCC;
 }
 .center {
 	width: 100%;
@@ -184,9 +192,6 @@ span.dropcap {
 .navbar {
 	width: 400px;
 	margin: auto;}
-.navbar-default .navbar-collapse {
-	border: none;
-}
 #twitterfeed {
 	display: block;
 }
@@ -228,13 +233,6 @@ width:50%;
 .rightHalf {
 float:right;
 width:45%;
-}
-#TrainCars{
-margin-top: 400px;
-height:90%;
-width:100%;
-z-index:99;
-background-color: #CCC;
 }
 
 
