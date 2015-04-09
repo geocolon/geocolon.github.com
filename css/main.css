@@ -14,7 +14,17 @@ body {
 	font-style: normal;
 	font-weight: 500;
 }
-
+table {
+	margin-top:1em;
+}
+td {
+	margin: 1em 0;
+	text-align: center;
+	width: 100px;
+}
+.h2em {
+	font-size:2em;
+}
 #aboutmeheading {
 	border-bottom: 3px rgb(0,51,153) solid;
 	padding-bottom: 5px;
