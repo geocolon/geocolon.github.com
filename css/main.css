@@ -54,6 +54,7 @@ td {
 	left:0;
 	z-index: -99;
 	height: 370px;
+	width:100%;
 	background-color: #ccc;
 }
 #TrainCars{
