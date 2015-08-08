@@ -265,3 +265,8 @@ background-color: #D4D4D4;
 position:relative;
 margin-right: 10px;
 }
+
+#ebook img {
+	margin: 10px;
+	height: 150px;
+}
