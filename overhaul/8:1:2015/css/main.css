@@ -3,14 +3,9 @@
 general
 ==============================================
 */
-@font-face {
-    font-family: "Futura",sans-serif;
-	font-style: normal;
-	font-weight: 500;
-}
+
 body {
-	font-family: 'Libre Baskerville', serif;
-	font-style: normal;
+	font-family: "nimbus-sans",sans-serif;	font-style: normal;
 	font-weight: normal;
 }
 .container {
@@ -22,7 +17,7 @@ p {
 	font-size: 0.05em;
 }
 h1 {
-    font-family: "Futura",sans-serif;
+    font-family: "nimbus-sans",sans-serif;
     display: inline-block;
     text-align: left;
     font-style: normal;
@@ -32,7 +27,7 @@ h1 {
     margin: 0;
 }
 h2 {
-	font-family: "Futura",sans-serif;
+	font-family: "nimbus-sans",sans-serif;
     font-style: normal;
     border-bottom: solid black thin;
 	font-weight: normal;
@@ -59,7 +54,7 @@ nav h1 {
 	text-align: left;
 }
 nav span {
-	font-family: "Futura",sans-serif;
+	font-family: "nimbus-sans",sans-serif;
     font-style: normal;
     float: right;
     margin: 2em 10% 2em 10%;
@@ -87,7 +82,7 @@ a:active {
 }
 
 .subtitle-gallery {
-	font-family: "Futura",sans-serif;
+	font-family: "nimbus-sans",sans-serif;
     font-style: normal;	
 }
 /* 
@@ -117,13 +112,13 @@ Color palette
 
 p {
 	font-size: 1em;
-	font-family: 'Libre Baskerville', serif;
+	font-family: "nimbus-sans",sans-serif;
 }
 p.indent {
 	text-indent: 1.6em;
 }
 span.dropcap {
-	font-family: "Futura",sans-serif;
+	font-family: "nimbus-sans",sans-serif;
     font-style: normal;
 	font-weight: normal;
 	font-size: 4em;
