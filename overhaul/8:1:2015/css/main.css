@@ -4,14 +4,175 @@ general
 ==============================================
 */
 
+/* New Nav Bar */
+
+*,
+*:after,
+*::before {
+	box-sizing: border-box;
+}
+.bt-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	border-width: 0px;
+	border-style: solid;
+	border-color: #333;
+	background-color: rgba(0,0,0,0);
+	transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+}
+.bt-menu.bt-menu-open {
+	height: 100%;
+	border-width: 30px 30px 30px 90px;
+	background-color: rgba(0,0,0,0.3);
+	transition: border-width 0.3s, background-color 0.3s;
+}
+.bt-overlay {
+	position: absolute;
+	width: 100%;
+}
+.bt-menu-open .bt-overlay {
+	height: 100%;
+}
+.bt-menu-trigger {
+	position: fixed;
+	top: 15px;
+	left: 20px;
+	display: block;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+.bt-menu-trigger span {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 4px;
+	margin-top: -2px;
+	background-color: #fff;
+	font-size: 0px;
+	user-select: none;
+	transition: background-color 0.3s;
+}
+.bt-menu-trigger span:before,
+.bt-menu-trigger span:after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	content: '';
+	transition: transform 0.3s;
+}
+.bt-menu-trigger span:before {
+	transform: translateY(-250%);
+}
+
+.bt-menu-trigger span:after {
+	transform: translateY(250%);
+}
+.bt-menu-open .bt-menu-trigger span:before {
+	transform: translateY(0) rotate(45deg);
+}
+
+.bt-menu-open .bt-menu-trigger span:after {
+	transform: translateY(0) rotate(-45deg);
+}
+.bt-menu ul {
+	position: fixed;
+	top: 75px;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 90px;
+	list-style: none;
+	backface-visibility: hidden;
+}
+.bt-menu ul li,
+.bt-menu ul li a {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.bt-menu ul li {
+	padding: 16px 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
+}
+.bt-menu ul li:first-child { 
+	transform: translate3d(-100%,200%,0);
+}
+
+.bt-menu ul li:nth-child(2) { 
+	transform: translate3d(-100%,100%,0);
+}
+
+.bt-menu ul li:nth-child(3) { 
+	transform: translate3d(-100%,0,0);
+}
+
+.bt-menu ul li:nth-child(4) { 
+	transform: translate3d(-100%,-100%,0);
+}
+
+.bt-menu ul li:nth-child(5) { 
+	transform: translate3d(-100%,-200%,0);
+}
+.bt-menu.bt-menu-open ul li {
+	visibility: visible;
+	opacity: 1;
+	transition: transform 0.3s, opacity 0.3s;
+	transform: translate3d(0,0,0);
+}
+/* This is what makes the fonts hidden! */
+/* 
+bt-menu ul li a {
+	display: block;
+	outline: none;
+	color: transparent;
+	text-decoration: none;
+	font-size: 0px;
+}
+.bt-menu ul li a:before {
+	color: #04a466;
+	font-size: 48px;
+	transition: color 0.2s;
+}
+ */
+
+.bt-menu ul li a:hover:before,
+.bt-menu ul li a:focus:before  {
+	color: #fff;
+}
+@media screen and (max-height: 31.125em) {
+	.bt-menu ul li a:before {
+		font-size: 32px;
+	}
+}
+ 
+ 
+
+/* End of New Nav Bar */
 body {
 	font-family: "nimbus-sans",sans-serif;	font-style: normal;
 	font-weight: normal;
+	background-color: rgb(255,153,51);
 }
 .container {
 	margin: auto;
+/* 
     width: 60%;
-    padding: 10px;
+ */
+	padding: 80px;
+}
+.clear {
+    clear: both;
+ 	display:block;
 }
 p {
 	font-size: 0.05em;
@@ -19,11 +180,9 @@ p {
 h1 {
     font-family: "nimbus-sans",sans-serif;
     display: inline-block;
-    text-align: left;
+    font-size: 1em;
     font-style: normal;
 	font-weight: normal;
-	font-size: 0.6em;
-    letter-spacing: 0.05em;
     margin: 0;
 }
 h2 {
@@ -32,35 +191,35 @@ h2 {
     border-bottom: solid black thin;
 	font-weight: normal;
 	text-align: center;
-	letter-spacing: 1px;
 	margin: 1em;
 }
 }
 .stage {
 	padding: 10px;
-	margin: 0 auto;
 	width: 100%;
+	
 	height: 1220px;
 }
 
 /* Nav Bar */
 
+/* 
 nav {
-	margin: 1em auto 0 auto;
+	margin: auto;
 }
 
 nav h1 {
 	display: inline-block;
+    font-size: 1em;
 	text-align: left;
 }
 nav span {
 	font-family: "nimbus-sans",sans-serif;
     font-style: normal;
     float: right;
+    font-size: 1em;
     margin: 2em 10% 2em 10%;
 	font-weight: normal;
-	letter-spacing: 1px;
-    overflow: hidden;
 
 }
 
@@ -74,17 +233,43 @@ a:visited {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a:active {
-    text-decoration: underline;
+    text-decoration: none;
 }
+ */
 
 .subtitle-gallery {
 	font-family: "nimbus-sans",sans-serif;
     font-style: normal;	
 }
+/* 
+vector images
+ */
+ .vectorimage {
+ 	float: left;
+    margin: 0 8% 0 8%;
+ 	
+
+}
+/* 
+ ID tages
+ */
+#vector_ipad {
+	height: 200px;
+}
+#vector_mousepen {
+	height: 200px;
+}
+#vector_of_geo {
+	height: 300px;
+}
+#greeting {
+	margin-top: 5em;
+}
+ 
 /* 
 Color palette
  */
