@@ -154,3 +154,12 @@ top: 50px;
 height:90%;
 width:100%;
 }
+
+
+dl {
+    counter-reset: term -1;
+}
+dt:before {
+    counter-increment: term 3;
+    content: counter(term) ". ";
+}
